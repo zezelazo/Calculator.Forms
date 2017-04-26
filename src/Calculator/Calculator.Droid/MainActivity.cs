@@ -19,10 +19,11 @@ namespace Calculator.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            MobileCenter.Start("34e97793-3d21-4033-b833-8002600cb005",
-                    typeof(Analytics), typeof(Crashes));
+            MobileCenter.Start("1c4ee466-9568-4f59-a43e-2afc5c3a6a47",
+                typeof(Analytics), typeof(Crashes));
 
-            Xamarin.Forms.Forms.ViewInitialized += (object sender, Xamarin.Forms.ViewInitializedEventArgs e) => {
+            Xamarin.Forms.Forms.ViewInitialized += (object sender, Xamarin.Forms.ViewInitializedEventArgs e) =>
+            {
                 if (!string.IsNullOrWhiteSpace(e.View.AutomationId))
                 {
                     e.NativeView.ContentDescription = e.View.AutomationId;
